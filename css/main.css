@@ -1,0 +1,118 @@
+/*
+    The * selector is a universal selector that applies to all page elements 
+    (except where a more specific element selector overrides it).
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    text-decoration: none;
+    color: var(--fontColor);
+    font-family: monospace;
+}
+
+:root {
+    --yellow: #faf2e1;
+    --grey: #000000d3;
+}
+
+.max-width {
+    max-width: 1300px;
+    padding: 0px 50px;
+    margin: auto;
+}
+
+.navbar {
+    top: 40px;
+    position: fixed;
+    padding: 20px 0px;
+    width: 100%;
+    background: var(--grey);
+}
+
+.navbar .max-width {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .menu li {
+    align-items:flex-end;
+    list-style: none;
+    display:inline-block;
+}
+
+.navbar .menu li a {
+    color: var(--yellow);
+    font-size:18px;
+    font-weight: 500;
+}
+
+.navbar .logo a {
+    color: var(--yellow);
+    font-size: 35pt;
+    font-weight: 600;
+}
+
+body {
+      background: var(--bg);
+}
+
+ul {
+    font-family: monospace;
+}
+
+li {
+    list-style: circle;
+  }
+  
+/* 
+    The period prefix indicates that this is a class selector.
+    Each HTML element that contains a class attribute set to "list" will inherit the styles 
+    that are defined within this selector.
+*/
+.list {
+    list-style: square;
+  }
+  
+/*
+    The pound sign prefix indicates that this is an ID selector.
+    The HTML element that has its id attribute set to "msg" will inherit the styles 
+    that are defined within this selector.
+*/
+#msg {
+    font-family: monospace;
+    font-size:large;
+}
+
+
+
+.light-theme {
+    --bg: var(--yellow);
+    --fontColor: var(--grey);
+    --btnBg: var(--yellow);
+    --btnFontColor: var(--grey);
+}
+
+.dark-theme {
+    --bg: var(--grey);
+    --fontColor: var(--yellow);
+    --btnBg: var(--grey);
+    --btnFontColor: var(--yellow);
+}
+
+.btn {
+    position: absolute;
+    top: 20px;
+    left: 250px;
+    height: 50px;
+    width: 100px;
+    border-radius: 50%;
+    border: none;
+    color: var(--btnFontColor);
+    background-color: var(--btnBg);
+}
+
+.btn:focus { 
+    outline-style: none; 
+}
