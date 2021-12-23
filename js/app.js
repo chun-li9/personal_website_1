@@ -1,5 +1,21 @@
-'use strict'
 
+$(document).ready(function(){
+    $(window).scroll(function(){
+        if(this.scrollY > 20){
+            $('.navbar').addClass("sticky");
+        }else{
+            $('.navbar').removeClass("sticky");
+        }
+    });
+    // toggle menu/navbar
+    $('.menu-btn').click(function(){
+        $('.navbar .menu').toggleClass("active");
+        $('.menu-btn i').toggleClass("active");
+    })
+});
+
+
+/*
 const switcher = document.querySelector('.btn'); // get the button reference
 
 switcher.addEventListener('click', function() {
@@ -15,3 +31,5 @@ switcher.addEventListener('click', function() {
 
     console.log('current class name: ' + className);
 });
+
+*/
