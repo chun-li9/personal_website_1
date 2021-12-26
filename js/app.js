@@ -6,12 +6,30 @@ $(document).ready(function(){
         }else{
             $('.navbar').removeClass("sticky");
         }
+        if(this.scrollY > 300){
+            $('.scroll-up-btn').addClass("show");
+        }else{
+            $('.scroll-up-btn').removeClass("show");
+        }
+    });
+
+    // scroll-up
+    $('.scroll-up-btn').click(function(){
+        $('html').animate({scrollTop: 0});
     });
 
     // toggle menu/navbar
     $('.menu-btn').click(function(){
         $('.navbar .menu').toggleClass("active");
         $('.menu-btn i').toggleClass("active");
+    });
+
+    // typing animation
+    var typed = new Typed(".typing", {
+        strings: ["Hello, my name is", "Bonjour, je m'appelle", "你好，我是"],
+        typeSpeed: 100,
+        backSpeed: 60,
+        loop: true,
     });
 
     // owl carousel
