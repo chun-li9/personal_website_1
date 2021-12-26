@@ -15,6 +15,7 @@
     --yellow: #faf2e1;
     --grey: #4e2e14d3;
     --brown: rgb(161, 105, 82);
+    --white: #fff;
 }
 
 .max-width {
@@ -29,6 +30,7 @@
     position: fixed;
     padding: 30px 0;
     width: 100%;
+    z-index: 999;
     font-family: 'Ubuntu', sans-serif;
     transition: all 0.3s ease;
 }
@@ -82,12 +84,50 @@
     color:var(--grey);
 }
 
-/*menu btn section */
+/* menu btn section */
 .menu-btn {
     color: var(--grey);
     font-size: 30px;
     cursor:pointer;
     display: none;
+}
+
+
+/* common styling */
+section {
+    padding: 100px 0;
+} 
+
+section .title {
+    position:relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    max-block-size: 60px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+section .title::before{
+    content: "";
+    position: absolute;
+    bottom:0px;
+    left: 50%;
+    width: 170px;
+    height: 3px;
+    background: var(--grey);
+    transform: translateX(-50%);
+}
+
+section .title::after{
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    font-size: 18px;
+    color: var(--brown);
+    padding: 5px;
+    background: var(--white);
+    transform: translateX(-50%);
 }
 
 
@@ -140,14 +180,275 @@
 }
 
 .home .home-content a:hover{
-    color: var(--yellow);
+    color: var(--brown);
     background: none;
 }
 
+.about, .tools, .skills {
+    font-family: 'Poppins', sans-serif;
+}
+
+.about .about-content,
+.tools .tools-content,
+.skills .skills-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+
+
+
+/* about section */
+.about .title::after {
+    content: "who i am";
+}
+
+.about .about-content .left{
+    width: 45%;
+}
+
+.about .about-content .left img{
+    height: 400px;
+    width: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-top: 60px;
+}
+
+.about .about-content .right {
+    color: var(--grey);
+    width: 55%;
+}
+
+.about .about-content .right .text {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.about .about-content .right .text span{
+    color: var(--brown);
+}
+
+.about .about-content .right p {
+    text-align: justify
+}
+
+.about .about-content .right a {
+    display: inline-block;
+    background: var(--brown);
+    color: var(--yellow);
+    font-size: 20px;
+    font-weight: 500;
+    padding: 5px 30px;
+    margin-top: 15px;
+    border-radius: 10px;
+    border: 2px solid var(--brown);
+    transition: all 0.5s ease;
+}
+
+.about .about-content .right a:hover {
+    color: var(--brown);
+    background: none;
+}
+
+
+
+
+
+
+
+/* tools section */
+.tools {
+    color: var(--yellow);
+    background: var(--grey);
+}
+
+.tools .title { /* ??????????? */
+    color: var(--yellow);
+}
+
+.tools .title::before {
+    background: var(--yellow);
+}
+
+.tools .title::after {
+    content: "tools i use";
+    color: var(--yellow);
+    background: var(--grey);
+}
+
+.tools .tools-content .card {
+    height: 15rem;
+    width: calc(33% - 20px);
+    background: var(--brown);
+    text-align: center;
+    border-radius: 10px;
+    padding: 20px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 60px;
+}
+
+.tools .tools-content .card:hover {
+    background: var(--grey);
+}
+
+.tools .tools-content .card .box {
+    transition: all 0.3s ease;
+}
+
+.tools .tools-content .card:hover .box {
+    transform: scale(1.05);
+}
+
+.tools .tools-content .card i {
+    font-size: 50px;
+    color: var(--grey);
+    transition: all 0.3s ease; /* all or color */
+}
+
+.tools .tools-content .card:hover i{
+    color: var(--yellow);
+}
+
+.tools .tools-content .card .text {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+
+
+
+
+
+
+
+/* skills section */
+.skills .title::after {
+    content: "what i know";
+}
+
+.skills .skills-content .column {
+    margin-top: 30px;
+    width: calc(50% - 30px);
+}
+
+.skills .skills-content .left .text {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.skills .skills-content .left p {
+    text-align: justify;
+}
+
+.skills .skills-content .left a { 
+    display: inline-block;
+    background: var(--brown);
+    color: var(--yellow);
+    font-size: 20px;
+    font-weight: 500;
+    padding: 5px 30px;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: 2px solid var(--brown);
+    transition: all 0.5s ease;
+}
+
+.skills .skills-content .left a:hover {
+    color: var(--brown);
+    background: none;
+}
+
+.skills .skills-content .right .bars {
+    margin-bottom: 15px;
+
+}
+
+.skills .skills-content .right .info {
+    display: flex;
+    margin-bottom: 5px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.skills .skills-content .right span {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.skills .skills-content .right .line {
+    height: 5px;
+    width: 100%;
+    background: var(--yellow);
+    position: relative;
+}
+
+.skills .skills-content .right .line::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 80%;
+    left: 0;
+    top: 0;
+    background: var(--brown);
+}
+
+.skills .skills-content .right .java::before {
+    width: 90%;
+}
+
+.skills .skills-content .right .c::before {
+    width: 80%;
+}
+
+.skills .skills-content .right .bash::before {
+    width: 80%;
+}
+
+.skills .skills-content .right .arm::before {
+    width: 60%;
+}
+
+.skills .skills-content .right .ocaml::before {
+    width: 50%;
+}
+
+.skills .skills-content .right .html::before {
+    width: 80%;
+}
+
+.skills .skills-content .right .css::before {
+    width: 80%;
+}
+
+.skills .skills-content .right .js::before {
+    width: 80%;
+}
+
+
+
+
+
+
+
 /* responsive media query */
-@media(max-width: 1104px){
+@media(max-width: 1300px){
     .home .max-width {
         margin-left: 0px;
+    }
+}
+
+@media(max-width: 1104px){
+    .about .about-content .left img{
+        height: 350px;
+        width: 275px;
+
     }
 }
 
@@ -158,6 +459,10 @@
 }
 
 @media(max-width: 947px){
+    .max-width {
+        max-width: 800px;
+    }
+    /* menu button */
     .menu-btn {
         display: block;
         z-index: 999;
@@ -165,6 +470,7 @@
     .menu-btn i.active:before{
         content: "\f00d";
     }
+    /* nav bar */
     .navbar .menu{
         position: fixed;
         height: 100vh;
@@ -187,6 +493,7 @@
         margin: 20px 0;
         font-size: 25px;;
     }
+    /* home section */
     .home .home-content .text-2 {
         font-size: 70px;
     }
@@ -198,12 +505,34 @@
         font-size: 23px;
         padding: 10px 30px;
     }
+    /* about section */
+    .about .about-content .column {
+        width: 100%;
+    }
+    .about .about-content .left {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+    .about .about-content .right {
+        flex: 100%;
+    }
+    /* tools section */
+    .tools .tools-content .card {
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
+    .skills .skills-content .column {
+        width: 100%;
+        margin-bottom: 10px;
+    }
 }
 
 @media(max-width: 690px){
     .max-width {
         padding: 0px 23px;
     }
+    /* home section */
     .home .home-content .text-2 {
         font-size: 60px;
     }
@@ -212,11 +541,16 @@
     }
     .home .home-content a {
         font-size: 20px;
-        padding: 9px 25px;
+        padding: 9px 25px; /* remove? */
+    }
+    /* tools section */
+    .tools .tools-content .card,
+    .skills .skills-content .column{
+        width: 100%;
     }
 }
 
-@media(max-width: 450px){
+@media(max-width: 500px){
     .home .home-content .text-2 {
         font-size: 50px;
     }
@@ -224,6 +558,9 @@
         font-size: 27px;
     }
 }
+
+
+
 
 
 
