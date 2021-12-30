@@ -1,20 +1,17 @@
-/*
-    The * selector is a universal selector that applies to all page elements 
-    (except where a more specific element selector overrides it).
-*/
+@import url(../css/loader.css);
+
 * {
     margin: 0;
     padding: 0;
     box-sizing:border-box;
     text-decoration: none;
-    color: var(--fontColor);
-    font-family: monospace;
 }
 
 :root {
-    --yellow: #faf2e1;
-    --grey: #4e2e14d3;
+    --yellow: rgb(250, 242, 225);
+    --grey: rgb(104, 80, 60);
     --brown: rgb(161, 105, 82);
+    --lightBrown: rgb(216, 172, 151);
     --white: #fff;
 }
 
@@ -26,19 +23,18 @@
 
 /* navbar section */
 .navbar {
-/*    top: 40px; */
     position: fixed;
     padding: 30px 0;
     width: 100%;
-    z-index: 999;
-    font-family: 'Ubuntu', sans-serif;
+    z-index: 99;
+    font-family: 'Kalam', cursive;
     transition: all 0.3s ease;
 }
 
 .navbar.sticky {
     padding: 30px 0;
     background:var(--yellow);
-    opacity: 0.9; 
+/*    opacity: 0.9; */
 }
 
 .navbar .max-width {
@@ -61,32 +57,37 @@
 }
 
 .navbar .menu li a:hover {
-    color:var(--yellow);
+    color:var(--lightBrown);
     transition: all 0.3s ease;
 }
 
+
+.navbar.sticky .menu li a {
+    color: var(--grey);
+}
+
 .navbar.sticky .menu li a:hover{
-    color:var(--grey);
+    color:var(--lightBrown);
 }
 
 .navbar .logo a {
-    color: var(--grey);
+    color: var(--yellow);
     font-size: 40pt;
     font-weight: 600;
 }
 
 .navbar .logo a span{
-    color:var(--yellow);
+    color:var(--lightBrown);
     transition: all 0.3s ease;
 }
 
-.navbar.sticky .logo a span{
+.navbar.sticky .logo a {
     color:var(--grey);
 }
 
 /* menu btn section */
 .menu-btn {
-    color: var(--grey);
+    color: var(--lightBrown);
     font-size: 30px;
     cursor:pointer;
     display: none;
@@ -102,7 +103,7 @@
     text-align: center;
     line-height: 45px;
     color: var(--yellow);
-    z-index:9999;
+    z-index:100;
     font-size: 30px;
     border-radius: 10px;
     cursor: pointer;
@@ -130,7 +131,8 @@ section .title {
     font-weight: 500;
     max-block-size: 60px;
     padding-bottom: 70px;
-    font-family: 'Ubuntu', sans-serif;
+    padding-top: 30px;
+    font-family: 'Kalam', cursive;
 }
 
 section .title::before{
@@ -156,7 +158,7 @@ section .title::after{
 }
 
 .about, .tools, .skills, .projects, .contact {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Kalam', cursive;
 }
 
 .about .about-content,
@@ -175,20 +177,183 @@ section .title::after{
 /* home section */
 .home {
     display: flex;
-    background: url("/assets/images/rabbit.jpg") no-repeat center/cover;
-    background-attachment: fixed;
-    height: 100vh;
-    color: var(--grey);
-    min-height: 500px;
-    font-family: 'Ubuntu', sans-serif;
+/*    background: url("../assets/images/rabbit.jpg") no-repeat center/cover; 
+    background-attachment: fixed;*/
+    background: var(--grey);
+    height: 0px;
+    color: var(--yellow);
+    min-height: 750px;
+    font-family: 'Kalam', cursive;
 }
 
 .home .max-width {
-    margin: auto 0 auto 40px;
+    margin: auto 0px auto 40px;
+}
 
+.home .home-content {
+    display: flex;
+/*    align-items: center; */
+    justify-content: space-between;
+}
+
+.home .home-content .right {
+    margin-left: 50px;
+    width: 40%;   
+}
+
+.home .home-content .right a{
+    display: inline-block;
+    text-align: center;
+    color: var(--yellow);
+    background: transparent;
+    font-weight: 600;
+    border-radius: 50%;
+    border: 6px solid var(--yellow);
+    transition: all 0.5s ease;
+}
+
+.home .home-content .right .contact a {
+    font-size: 18px;
+    padding: 12px 10px;
+    margin-top: 120px;
+    margin-left: 45px;
+
+    animation-delay: 4.25s;
+    animation-duration: 5s;
+    animation-name: emphasis;
+    animation-iteration-count: infinite;
+}
+.home .home-content .right .contact i {
+    font-size: 23px;
+}
+
+.home .home-content .right .tools a {
+    font-size: 23px;
+    padding: 10px 25px;
+    margin-top: 40px;
+    margin-left: 50px;
+
+    animation-delay: 3.5s;
+    animation-duration: 5s;
+    animation-name: emphasis;
+    animation-iteration-count: infinite;
+}
+.home .home-content .right .tools i {
+    font-size: 40px;
+}
+
+.home .home-content .right .skills a {
+    font-size: 23px;
+    padding: 12px 28px;
+    margin-top: 0px;
+    margin-left: 330px;
+
+    animation-delay: 2.75s;
+    animation-duration: 5s;
+    animation-name: emphasis;
+    animation-iteration-count: infinite;
+}
+.home .home-content .right .skills i{
+    font-size: 40px;
+}
+
+.home .home-content .right .group {
+    display: flex;
+}
+
+.home .home-content .right .about a {
+    font-size: 18px;
+    padding: 0px 20px;
+    padding-top: 10px;
+    margin-top: 50px;
+    margin-left: 20px;
+
+    animation-delay: 5s;
+    animation-duration: 5s;
+    animation-name: emphasis;
+    animation-iteration-count: infinite;
+}
+.home .home-content .right .about i {
+    font-size: 25px;
+}
+
+
+
+
+.home .home-content .right .projects a {
+    font-size: 28px;
+    padding: 20px 20px;
+    margin-top: 0px;
+    margin-left: 150px;
+
+    animation-delay: 2s;
+    animation-duration: 5s;
+    animation-name: emphasis;
+    animation-iteration-count: infinite;
+}
+.home .home-content .right .projects i{
+    font-size: 50px;
+}
+
+.home .home-content .right .icon a {
+    --fons: 28px;
+    --pd: 20px 20px;
+    --mt: 0px;
+    --ml: 150px;
+    font-size: var(--fons);
+    padding: var(--pd);
+    margin-top: var(--mt);
+    margin-left: var(--mls);
+
+    --anidel: 2s
+    animation-delay: var(--anidel);
+    animation-duration: 5s;
+    animation-name: emphasis;
+    animation-iteration-count: infinite;
+}
+.home .home-content .right .icon i{
+    font-size: 50px;
+}
+
+
+
+
+.home .home-content .right .about a:hover{
+    animation-play-state: paused;
+    background: var(--brown);
+    transform: scale(1.4);
+}
+
+
+
+@keyframes emphasis {
+    0%{
+        transform: scale(1.0);
+        background: transparent;
+    }
+    10%{
+        transform: scale(1.4);
+        background: var(--lightBrown);
+    }
+    20%{
+        transform: scale(1.0);
+        background: transparent;
+    }
+    100%{
+        transform: scale(1.0);
+        background: transparent;
+    }
+}
+
+
+
+
+.home .home-content .column.left {
+    width: 60%;
 }
 
 .home .home-content .text-1 {
+    height: 55px; /* prevent chinese characters from changing the position of the following content */
     font-size: 27px;
 }
 
@@ -204,26 +369,12 @@ section .title::after{
 }
 
 .home .home-content .text-3 span{
-    color:var(--brown);
+    font-size: 35px;
+    color:var(--lightBrown);
     font-weight: 500;
 }
 
-.home .home-content a{
-    display: inline-block;
-    background: var(--brown);
-    color: var(--yellow);
-    font-size: 25px;
-    padding: 12px 36px;
-    margin-top: 15px;
-    border-radius: 10px;
-    border: 2px solid var(--brown);
-    transition: all 0.5s ease;
-}
 
-.home .home-content a:hover{
-    color: var(--brown);
-    background: none;
-}
 
 
 
@@ -621,7 +772,7 @@ section .title::after{
     border-radius: 10px;
     padding: 0 15px;
     font-size: 14px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Kalam', cursive;
 }
 
 .contact .contact-content .column.right form .field.textarea textarea {
@@ -659,7 +810,7 @@ section .title::after{
 
 /* footer section */
 .footer {
-    background: var(--brown);
+    background: var(--grey);
     padding: 40px 0px;
 }
 
@@ -670,14 +821,14 @@ section .title::after{
 }
 
 .footer .container i {
-    color: var(--grey);
+    color: var(--yellow);
     font-size: 30px;
     margin-left: 20px;
     margin-right: 20px;
 }
 
 .footer .container i:hover {
-    color: var(--yellow);
+    color: var(--lightBrown);
     padding-top: 5px;
 }
 
@@ -699,24 +850,24 @@ section .title::after{
     .about .about-content .left img{
         height: 350px;
         width: 275px;
-
     }
 }
 
 @media(max-width: 991px){
     .max-width {
+        max-width: 991px;
         padding: 0px 50px;
     }
 }
 
 @media(max-width: 947px){
     .max-width {
-        max-width: 800px;
+        max-width: 947px;
     }
     /* menu button */
     .menu-btn {
         display: block;
-        z-index: 999;
+        z-index: 99;
     }
     .menu-btn i.active:before{
         content: "\f00d";
@@ -752,9 +903,8 @@ section .title::after{
     .home .home-content .text-3 {
         font-size: 35px;
     }
-    .home .home-content a {
-        font-size: 23px;
-        padding: 10px 30px;
+    .home .home-content .column {
+        width: 100%;
     }
     /* about section */
     .about .about-content .column {
@@ -817,69 +967,231 @@ section .title::after{
 
 
 
-/*
-body {
-    background: var(--bg);
+
+
+.trail {
+    pointer-events: none;
+    position: absolute; 
+    width: 10px;
+    height: 10px;
+    border-radius: 50%; 
+    animation-timing-function: ease-in-out;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-name: disappear;
 }
 
-ul {
-    font-family: monospace;
-}
-
-li {
-    list-style: circle;
+@keyframes disappear {
+  0% {
+    transform: scale(1.0);
   }
-
-*/
-  
-/* 
-    The period prefix indicates that this is a class selector.
-    Each HTML element that contains a class attribute set to "list" will inherit the styles 
-    that are defined within this selector.
-*/
-/*
-.list {
-    list-style: square;
+  100% {
+    transform: scale(0);
+    opacity: 0.0;
   }
-*/
-
-  
-/*
-    The pound sign prefix indicates that this is an ID selector.
-    The HTML element that has its id attribute set to "msg" will inherit the styles 
-    that are defined within this selector.
-*/
-/*
-#msg {
-    font-family: monospace;
-    font-size:large;
 }
 
 
-.light-theme {
-    --bg: var(--yellow);
-    --fontColor: var(--grey);
-    --btnBg: var(--yellow);
-    --btnFontColor: var(--grey);
+
+
+
+
+
+
+
+
+
+
+.loader-wrapper {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--yellow);
+    display: block;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    overflow: hidden;
 }
 
-.dark-theme {
-    --bg: var(--grey);
-    --fontColor: var(--yellow);
-    --btnBg: var(--grey);
-    --btnFontColor: var(--yellow);
-}
-*/
-
-.btn {
-
-    width: 100px;
-    border-radius: 50%;
-    border: none;
-    color: var(--btnFontColor);
-    background-color: var(--btnBg);
+.loader-wrapper .wrap {
+    position: absolute;
+    width: 380px;
+    height: 500px;
+    background-color: transparent;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-.btn:focus { 
-    outline-style: none; 
+/* a cup of hot chocolate */
+.loader-wrapper .wrap .coffee_cup{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -75%);
+    z-index: 1000;
+
+    width: 40%;
+    height: 25%;
+    background: url("../assets/images/coffee.png");
+    background-repeat: repeat-x;
+    background-position: 0px 160px;
+    border-radius: 0px 0px 60px 60px;
+    border: 15px solid var(--yellow);   
+    box-shadow: 0px 0px 0px 15px var(--grey);
+
+    animation-delay: 0.2s;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    animation-name: fill_coffee;
+}
+.loader-wrapper .wrap .coffee_cup::before{
+    content: "";
+    height: 30%;
+    width: 15%;
+    background: transparent;
+    border: 15px solid var(--grey);
+    border-radius: 0px 30px 50px 0px;
+    position: absolute;
+    top: 0%;
+    left: 115%;
+}
+@keyframes fill_coffee {
+    0%{
+        background-position: 0px 160px;
+    }
+    100%{
+        background-position: -500px -50px;          
+    }
+}
+
+.loader-wrapper .wrap .bubbles_area {
+    background: transparent;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -260%);
+    width: 40%;
+    height: 15%; 
+    z-index: 999;
+}
+.loader-wrapper .wrap .bubbles_area .bubbles {
+    position: absolute;
+    background: var(--brown);
+    opacity: 0;
+    border-radius: 50%;   
+    width: 20px;
+    height: 20px;  
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: bubble_disappear;
+}
+.bubbles.b1{   
+    top: 50%;
+    left: 5%;     
+    animation-delay: 2.75s;
+}
+.bubbles.b2{
+    top: 35%;
+    left: 25%;     
+    animation-delay: 2.5s;
+}
+.bubbles.b3{
+    top: 40%;
+    left: 50%;     
+    animation-delay: 3.5s;
+}
+.bubbles.b4{
+    top: 45%;
+    left: 80%;     
+    animation-delay: 3s;
+}
+.bubbles.b5{
+    top: 15%;
+    left: 20%;     
+    animation-delay: 4.5s;
+}
+.bubbles.b6{
+    top: 10%;
+    left: 40%;     
+    animation-delay: 4.25s;
+}
+.bubbles.b7{
+    top: 20%;
+    left: 65%;     
+    animation-delay: 4.75s;
+}
+.bubbles.b8{
+    top: 60%;
+    left: 25%;     
+    animation-delay: 1.75s;
+}
+.bubbles.b9{
+    top: 55%;
+    left: 45%;     
+    animation-delay: 2.25s;
+}
+.bubbles.b10{
+    top: 60%;
+    left: 70%;     
+    animation-delay: 2s;
+}
+
+@keyframes bubble_disappear {
+    0%{
+        opacity: 0.0;
+        transform: scale(1.0);
+    }
+    50%{
+        opacity: 0.9;
+        transform: scale(2.0);
+    }
+    100%{
+        opacity: 0.0;
+        transform: scale(2.3);
+    }
+}
+
+/* progress bar */
+.loader-wrapper .wrap .progress{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, 350%);
+    height: 10px;
+    width: 75%;
+    border: 10px solid var(--lightBrown);
+    border-radius: 10px;
+}
+.loader-wrapper .wrap .progress .bar{
+    position: relative;
+    top: 50%;
+    left: 0%;
+    transform: translate(0%, -50%);
+    background-color: var(--brown);
+    width: 0px;
+    height: 10px;
+    border-radius: 10px;
+    animation-delay: 0.6s ;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-name: loading_bar; 
+}
+@keyframes loading_bar{
+    0%{
+      width: 0%;
+    }
+    40%{
+        width: 70%;
+    }
+    100%{
+        width: 100%;
+    }
 }
