@@ -19,9 +19,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
 </head>
 
-<body>
-    <script src="../js/app.js"></script>
-    
+<body>    
+    <!-- loading page -->
     <div class="loader-wrapper">
         <div class="wrap">
             <div class="coffee_cup"></div>    
@@ -43,15 +42,15 @@
         </div>      
     </div>
     
+    <!-- content pages -->
     <div id="entire-body">
-        <!--
-        <div class="cursor"><img id="gif" src="/assets/images/pikachu.gif"></div>
-        -->
 
+        <!-- scroll up button section -->
         <div class="scroll-up-btn">
             <i class="fas fa-angle-up"></i>
         </div>
 
+        <!-- navigation bar section -->
         <nav class="navbar">
             <div class="max-width">
                 <div class="logo">
@@ -81,34 +80,35 @@
                         <div class="text-3">I'm a <br><span>Software Engineering Student</span></div>
                     </div>
                     <div class="column right">  
+
                         <div class="icon">
                             <a href="#projects">
                                 <i class="fas fa-laptop-code"></i>
                                 <div class="text">projects</div>
                             </a>
                         </div>     
-                        <div class="icon" style="--fons:23px;--pd:12px 28px;--mt:0px;--ml:330px;--anidel:2.75s;">
-                            <a href="#skills">
-                                <i class="fas fa-code"></i>
+                        <div class="icon">
+                            <a href="#skills" style="--fons:23px;--pd:12px 28px;--mt:0px;--ml:330px;--anidel:0.75s;">
+                                <i class="fas fa-code" style="--fons:40px"></i>
                                 <div class="text">skills</div>
                             </a>
                         </div>              
                         <div class="group">
-                            <div class="icon about">
-                                <a href="#about">
-                                    <i class="fas fa-id-card"></i>
+                            <div class="icon">
+                                <a href="#about" style="--fons:18px;--pd:8px 23px;--mt:50px;--ml:20px;--anidel:3s;">
+                                    <i class="fas fa-id-card" style="--fons:25px"></i>
                                     <div class="text">me</div>
                                 </a>
                             </div>
-                            <div class="icon contact">
-                                <a href="#contact">
-                                    <i class="fas fa-comment-dots"></i>
+                            <div class="icon">
+                                <a href="#contact" style="--fons:18px;--pd:12px 10px;--mt:120px;--ml:45px;--anidel:2.25s;">
+                                    <i class="fas fa-comment-dots" style="--fons:23px"></i>
                                     <div class="text">contact</div>
                                 </a>
                             </div> 
-                            <div class="icon tools">
-                                <a href="#tools">
-                                    <i class="fas fa-tools"></i>
+                            <div class="icon">
+                                <a href="#tools" style="--fons:23px;--pd:10px 25px;--mt:40px;--ml:50px;--anidel:1.5s;">
+                                    <i class="fas fa-tools" style="--fons:40px"></i>
                                     <div class="text">tools</div>
                                 </a>
                             </div>  
@@ -130,7 +130,7 @@
                     <div class="column right">
                         <div class="text">I'm Chun and I'm a <span>Student</span></div>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis molestias veritatis officia libero fugit. Earum sunt odio quisquam quos natus vitae maiores animi consectetur quaerat doloribus libero et numquam deserunt asperiores laudantium laborum vel magni ipsam nulla, odit, sequi sit. Tenetur voluptatum et omnis aut minus est dolore consequuntur laudantium perspiciatis. Doloribus totam veritatis suscipit quia quibusdam voluptatem enim cum.</p>
-                        <a href="#">Download Resume</a>
+                        <a href="/assets/download_documents/Chun_Li.pdf" download="chun_li_resume">Download Resume</a>
                     </div>
                 </div>
             </div>
@@ -143,33 +143,39 @@
                 <div class="tools-content">
                     <div class="card">
                         <div class="box">
-                            <div class="text">Version Control Tool</div>
-                            <i class="fab fa-git"></i>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, totam amet voluptatibus repellat ipsam commodi?</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="box">
                             <div class="text">Build Tool</div>
+                            <img src="/assets/images/gradle.png" style="--iw:36px;--ih:33px;" alt="">
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, totam amet voluptatibus repellat ipsam commodi?</p>
                         </div>
                     </div>
                     <div class="card">
                         <div class="box">
                             <div class="text">Framework</div>
-                            <i class="fab fa-vuejs"></i>
+                            <img src="/assets/images/vuejs.png" alt="">
+                            <img src="/assets/images/spring.png" alt="">
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, totam amet voluptatibus repellat ipsam commodi?</p>
                         </div>
                     </div>
                     <div class="card">
                         <div class="box">
                             <div class="text">Testing Tool</div>
+                            <img src="/assets/images/cucumber.png" style="--iw:30px;--ih:35px;" alt="">
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, totam amet voluptatibus repellat ipsam commodi?</p>
                         </div>
                     </div>
                     <div class="card">
                         <div class="box">
-                            <div class="text">Integrated Development Environment(IDE)</div>
+                            <div class="text">Version Control Tool</div>
+                            <img src="/assets/images/github.png" alt="">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, totam amet voluptatibus repellat ipsam commodi?</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="box">
+                            <div class="text">Software</div>
+                            <img src="/assets/images/eclipse.png" alt="">
+                            <img src="/assets/images/vscode.png" alt="">
+                            <img src="/assets/images/vim.png" alt="">
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, totam amet voluptatibus repellat ipsam commodi?</p>
                         </div>
                     </div>
@@ -191,7 +197,7 @@
                         <div class="bars">
                             <div class="info">
                                 <span>Java</span>
-                                <span>90%</span>
+                                <span>80%</span>
                             </div>
                             <div class="line java"></div>
                         </div>
@@ -199,7 +205,7 @@
                         <div class="bars">
                             <div class="info">
                                 <span>C</span>
-                                <span>90%</span>
+                                <span>70%</span>
                             </div>
                             <div class="line c"></div>
                         </div>
@@ -207,15 +213,15 @@
                         <div class="bars">
                             <div class="info">
                                 <span>Bash</span>
-                                <span>90%</span>
+                                <span>70%</span>
                             </div>
                             <div class="line bash"></div>
                         </div>
 
                         <div class="bars">
                             <div class="info">
-                                <span>ARM assembly</span>
-                                <span>90%</span>
+                                <span>ARMv7</span>
+                                <span>65%</span>
                             </div>
                             <div class="line arm"></div>
                         </div>
@@ -223,31 +229,23 @@
                         <div class="bars">
                             <div class="info">
                                 <span>OCmal</span>
-                                <span>90%</span>
+                                <span>60%</span>
                             </div>
                             <div class="line ocaml"></div>
                         </div>
 
                         <div class="bars">
                             <div class="info">
-                                <span>HTML</span>
-                                <span>90%</span>
+                                <span>HTML & CSS</span>
+                                <span>70%</span>
                             </div>
-                            <div class="line html"></div>
-                        </div>
-
-                        <div class="bars">
-                            <div class="info">
-                                <span>CSS</span>
-                                <span>90%</span>
-                            </div>
-                            <div class="line css"></div>
+                            <div class="line htmlcss"></div>
                         </div>
 
                         <div class="bars">
                             <div class="info">
                                 <span>JavaScript</span>
-                                <span>90%</span>
+                                <span>50%</span>
                             </div>
                             <div class="line js"></div>
                         </div>
@@ -368,21 +366,7 @@
             </div>
         </footer>
 
-
-
-    <!--
-        <h1>Task List</h1>
-
-        <p id="msg">Current tasks:</p>
-        <ul>
-        <li class="list">Add visual styles</li>
-        <li class="list">Add light and dark themes</li>
-        <li>Enable switching the theme</li>
-        </ul>
-
-    -->
-        
-        
+        <script src="../js/app.js"></script>
         <!--fault tolerance or graceful degradation-->
         <noscript>You need to enable JavaScript to view the full site.</noscript>
     </div>

@@ -15,7 +15,8 @@ function removeLoader(){
     });  
 }
   
-setTimeout(removeLoader, 6000);
+//setTimeout(removeLoader, 5500);
+setTimeout(removeLoader, 5300);
 
 
 // main page activity
@@ -111,6 +112,20 @@ $(document).ready(function(){
         $("<div class='trail' style='" + style + "'></div>").appendTo('#entire-body'); 
       }
     }, 25);
+
+    //home page menu animation
+    $(".home .home-content .right .icon a").hover(
+        function(){
+            $(".home .home-content .right a").css("animation-duration", "0s");
+            $(this).css("background", "var(--brown)");
+            $(this).css("transform", "scale(1.4)");
+            }, 
+        function(){
+            $(".home .home-content .right a").css("animation-duration", "5s");
+            $(this).css("background", "transparent");
+            $(this).css("transform", "scale(1.0)");
+        }
+      );
 
 });
 
