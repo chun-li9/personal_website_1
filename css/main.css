@@ -211,13 +211,6 @@ section .title::after{
 
 
 
-
-
-
-
-
-
-
 /* home section */
 .home {
     display: flex;
@@ -325,9 +318,6 @@ section .title::after{
 
 
 
-
-
-
 /* about section */
 .about .title::after {
     content: "who i am";
@@ -353,7 +343,8 @@ section .title::after{
 .about .about-content .right .text {
     font-size: 25px;
     font-weight: 600;
-    margin-bottom: 10px;
+    padding-top: 50px;
+    margin-bottom: 15px;
 }
 
 .about .about-content .right .text span{
@@ -361,7 +352,23 @@ section .title::after{
 }
 
 .about .about-content .right p {
-    text-align: justify
+    font-size: 17px;
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+.about .about-content .right p a {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--brown);
+    background: none;
+    border: none;
+    padding: 0 0;
+    margin-top: 0;
+}
+
+.about .about-content .right p a:hover {
+    color: var(--lightBrown);
 }
 
 .about .about-content .right a {
@@ -381,8 +388,6 @@ section .title::after{
     color: var(--brown);
     background: none;
 }
-
-
 
 
 
@@ -411,21 +416,18 @@ section .title::after{
 
 
 
-
-
 /* tools unique section */
 .tools .title::after{
     content: "tools i use";
 }
 
 .tools .tools-content .card{
-    height: 15rem;
+    height:17rem;
     width: calc(33% - 20px);
     background: var(--brown);
     text-align: center;
     border-radius: 10px;
-    padding: 20px 25px;
-    cursor: pointer;
+    padding: 20px 20px;
     transition: all 0.3s ease;
     margin-top: 60px;
 }
@@ -437,23 +439,31 @@ section .title::after{
     height: var(--ih);
 }
 
-/* .tools .tools-content .card i {
-    font-size: 50px;
-    color: var(--grey);
-    transition: all 0.3s ease; 
-}
-
-.tools .tools-content .card:hover i{
-    color: var(--brown);
-} */
-
-.tools .tools-content .card .text {
+.tools .tools-content .card .box .text {
     font-size: 25px;
-    font-weight: 500;
+    font-weight: 600;
     margin: 10px 0 7px 0;
 }
 
+.tools .tools-content .card .box .p_title {
+    font-size: 19px;
+    font-weight: 600;
+}
 
+.tools .tools-content .card .box .p_content {
+    font-size: 19px;
+    font-weight: 500;
+}
+
+.tools .tools-content .card .box .p_content a {
+    font-size: 19px;
+    font-weight: 600;
+    color: var(--lightBrown);
+}
+
+.tools .tools-content .card .box .p_content a:hover {
+    color: var(--brown);
+}
 
 
 
@@ -463,13 +473,22 @@ section .title::after{
     content: "projects i did";
 }
 
+.projects p {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 40px;
+}
+
 .projects .carousel .card {
+    color: var(--yellow);
     background: var(--brown);
     border-radius: 10px;
     padding: 25px 35px;
     text-align: center;
     transition: all 0.3s ease;
-    margin-top: 60px;
+    margin-top: 40px;
+    cursor: pointer;
+    height: 23rem;
 }
 
 .projects .carousel .card .box {
@@ -485,14 +504,20 @@ section .title::after{
     margin: 10px 0 7px 0;
 }
 
-.projects .carousel .card .i {
-    font-size: 100px;
+.projects .carousel .card i {
+    font-size: 70px;
     color: var(--grey);
     transition: all 0.3s ease; /* all or color */
 }
 
-.projects .carousel .card:hover .i {
+.projects .carousel .card:hover i {
     color: var(--brown);
+}
+
+.projects .carousel .card p {
+    margin-top: 0;
+    text-align: left;
+    font-size: 17px;
 }
 
 .owl-dots {
@@ -523,11 +548,6 @@ section .title::after{
 
 
 
-
-
-
-
-
 /* skills section */
 .skills .title::after {
     content: "what i know";
@@ -539,12 +559,15 @@ section .title::after{
 }
 
 .skills .skills-content .left .text {
+    color: var(--grey);
     font-size: 25px;
     font-weight: 600;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .skills .skills-content .left p {
+    color: var(--grey);
+    font-size: 17px;
     text-align: justify;
 }
 
@@ -605,11 +628,11 @@ section .title::after{
 }
 
 .skills .skills-content .right .c::before {
-    width: 70%;
+    width: 65%;
 }
 
 .skills .skills-content .right .bash::before {
-    width: 70%;
+    width: 60%;
 }
 
 .skills .skills-content .right .arm::before {
@@ -617,7 +640,7 @@ section .title::after{
 }
 
 .skills .skills-content .right .ocaml::before {
-    width: 60%;
+    width: 55%;
 }
 
 .skills .skills-content .right .htmlcss::before {
@@ -628,9 +651,6 @@ section .title::after{
 .skills .skills-content .right .js::before {
     width: 50%;
 }
-
-
-
 
 
 
@@ -652,12 +672,9 @@ section .title::after{
     margin-bottom: 10px;
 }
 
-.contact .contact-content .column.left p{
-    text-align: justify;
-}
-
 .contact .contact-content .column.left .icons {
     margin: 10px 0;
+    color: var(--grey);
 }
 
 .contact .contact-content .row {
@@ -747,7 +764,6 @@ section .title::after{
 
 
 
-
 /* footer section */
 .footer {
     padding: 40px 0px;
@@ -770,10 +786,6 @@ section .title::after{
     color: var(--lightBrown);
     padding-top: 5px;
 }
-
-
-
-
 
 
 
@@ -904,10 +916,6 @@ section .title::after{
 
 
 
-
-
-
-
 .trail {
     pointer-events: none;
     position: absolute; 
@@ -929,13 +937,6 @@ section .title::after{
     opacity: 0.0;
   }
 }
-
-
-
-
-
-
-
 
 
 
