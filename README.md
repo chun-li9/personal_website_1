@@ -3,4 +3,4 @@
 This is my personal website.
 It can be accessed through the address below:
 
-chunli9.com
+http://chunli9.com/
