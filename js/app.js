@@ -47,7 +47,7 @@ $(document).ready(function(){
 
     // typing animation
     var typed = new Typed(".typing", {
-        strings: ["Hello, my name is", "你好，我是"],
+        strings: ["Hello, my name is", "Bonjour, je m'appelle","你好，我是"],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true,
