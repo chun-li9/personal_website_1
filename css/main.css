@@ -190,6 +190,7 @@ section .title::after{
 
 .about .about-content,
 .projects carousel,
+.experience .experience-content,
 .contact .contact-content {
     display: flex;
     align-items: center;
@@ -415,13 +416,6 @@ section .title::after{
 /* experience unique section */
 .experience .title::after{
     content: "my work / internship experiences";
-}
-
-.experience .experience-content {
-    justify-items: center;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 }
 
 .experience .experience-content .card{
