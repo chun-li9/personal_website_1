@@ -58,7 +58,7 @@
                 <ul class="menu">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#tools">Tools</a></li>
+                    <li><a href="#experience">Experiences</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contacts</a></li>
@@ -82,13 +82,13 @@
 
                         <div class="icon">
                             <a href="#projects">
-                                <i class="fas fa-laptop-code"></i>
+                                <i class="fas fa-laptop-code" style="--fons:40px"></i>
                                 <div class="text">projects</div>
                             </a>
                         </div>     
                         <div class="icon">
                             <a href="#skills" style="--fons:23px;--pd:12px 28px;--mt:0px;--ml:330px;--anidel:0.75s;">
-                                <i class="fas fa-code" style="--fons:40px"></i>
+                                <i class="fas fa-code" style="--fons:35px"></i>
                                 <div class="text">skills</div>
                             </a>
                         </div>              
@@ -106,9 +106,9 @@
                                 </a>
                             </div> 
                             <div class="icon">
-                                <a href="#tools" style="--fons:23px;--pd:10px 25px;--mt:40px;--ml:50px;--anidel:1.5s;">
-                                    <i class="fas fa-tools" style="--fons:40px"></i>
-                                    <div class="text">tools</div>
+                                <a href="#experience" style="--fons:25px;--pd:10px 25px;--mt:50px;--ml:50px;--anidel:1.5s;">
+                                    <i class="fas fa-file-code" style="--fons:50px"></i>
+                                    <div class="text">experience</div>
                                 </a>
                             </div>  
                         </div>
@@ -128,9 +128,9 @@
                     </div>
                     <div class="column right">
                         <div class="text">Some <span>interesting facts </span>about me</div>
-                        <p>My name is Chun, I was born in China and came to Montreal when I was in secondary 4. Currently, I’m a U2 student at McGill University studying software engineering. I entered university in 2020 with interest in Artificial Intelligence and my plan is to take AI as a minor program starting from U3.
-                            <br><br>Through the several academic projects I did in school (which are introduced in the <a href="#projects">projects</a> section on this page), I discovered my passion in backend and frontend development. I’m especially interested in frontend development, as designing user interface brings me a lot of fun.
-                            <br><br>In my spare time, I enjoy playing the violin, travelling with my friends and photographing. Sometimes I also do some small projects to practice my skills and learn more new things as I believe in learning by doing!
+                        <p>My name is Chun Li and I’m a third-year Software Engineering undergraduate student at McGill University. 
+                            <br><br>I entered the university in 2020, intending to become a frontend developer after graduation. But as I learnt new technologies and worked on different projects throughout the years, I developed more interest in backend development, especially after my first internship at Exfo. There are more chances to encounter exciting challenges in designing and developing backends, and I really enjoy brainstorming and having trial and error when trying to solve those problems.
+                            <br><br>I also have particular interests in applications of artificial intelligence in the medical field; therefore, I applied to and got admitted into a minor program in Applied Artificial Intelligence at McGill. As a short-term goal, I would like to work as a  software developer in an AI Health Care Company after graduation.
                             </p>
                         <a href="/assets/download_documents/Chun_Li.pdf" download="chun_li_resume">Download Resume</a>
                     </div>
@@ -139,53 +139,22 @@
         </section>
 
         <!-- tool section -->
-        <section class="tools" id="tools">
+        <section class="experience" id="experience">
             <div class="max-width">
-                <h2 class="title">Development tools</h2>
-                <div class="tools-content">
+                <h2 class="title">Work Experiences</h2>
+                <div class="experience-content">
                     <div class="card">
-                        <div class="box">
-                            <div class="text">Build Tool</div>
-                            <img src="/assets/images/gradle.png" style="--iw:36px;--ih:33px;" alt="">
-                            <p class="p_title">Gradle</p>
-                            <p class="p_content">Build tool used during development of <a href="https://github.com/McGill-ECSE321-Fall2021/project-group-21">Library System</a> and <a href="https://github.com/McGill-ECSE223-Winter2021/ecse223-group-project-19">Carshop system</a></p>
+                        <span>Software Designer Intern</span>
+                        <div class="detail">
+                            <p class="company">Exfo Inc.</p>
+                            <p class="time">Summer 2022</p>
                         </div>
+                        <p>
+                            Under supervision, designed and built a Python application that automatically deploys network tests to Kubernetes and monitors the status of the tests until completion.
+                            Automatically collected resource usages from the running tests using Prometheus, and achieved real-time visualization of the resource usage using Grafana.
+                        </p>
                     </div>
-                    <div class="card">
-                        <div class="box">
-                            <div class="text">Framework</div>
-                            <img src="/assets/images/vuejs.png" alt="">
-                            <img src="/assets/images/spring.png" alt="">
-                            <p class="p_title">Vue.js & Spring</p>
-                            <p class="p_content">Backend and frontend frameworks used in development of <a href="https://github.com/McGill-ECSE321-Fall2021/project-group-21">Library System</a></p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="box">
-                            <div class="text">Testing Tool</div>
-                            <img src="/assets/images/cucumber.png" style="--iw:30px;--ih:35px;" alt="">
-                            <p class="p_title">Cucumber</p>
-                            <p class="p_content">Testing tool used in testing of <a href="https://github.com/McGill-ECSE223-Winter2021/ecse223-group-project-19">Carshop system</a></p>                        
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="box">
-                            <div class="text">Version Control Tool</div>
-                            <img src="/assets/images/github.png" alt="">
-                            <p class="p_title">Github</p>
-                            <p class="p_content">Version control tool used in all major projects.</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="box">
-                            <div class="text">Software</div>
-                            <img src="/assets/images/eclipse.png" alt="">
-                            <img src="/assets/images/vscode.png" alt="">
-                            <img src="/assets/images/vim.png" alt="">
-                            <p class="p_title">Eclipse & VSCode & Vim</p>
-                            <p class="p_content">IDE or text editor used in different projects: Eclipse for Java, Vim for Bash, VSCode for all other languages.</p>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
         </section>
@@ -195,74 +164,83 @@
             <div class="max-width">
                 <h2 class="title">My skills</h2>
                 <div class="skills-content">
-                    <div class="column left">
-                        <div class="text">Coding languages that I'm familiar with</div>
-                        <p>Here are my most-often used languages and relatively to what extent I am familiar with them. 
-                            Java, as my “first language” in coding, was used in two of the largest projects I did in school, 
-                            and it was also the language I used to learn and practice writing sorting and searching algorithms. 
-                            Therefore, I am quite familiar with the syntax and the object-oriented concepts in java. 
-                            If describing my degree of familiarity to java to be 80%, that of other languages relative to the java standard are as follow. 
-                            <br><br>
-                            To see the projects that I did with different languages, please click on “read more” below.
-                            </p>
-                        <a href="#projects">Read more</a>
+                    <div class="titles">
+                        <div class="text">Programming Languages</div>
+                        <div class="text">Tools and Techniques</div>
                     </div>
-                    <div class="column right">
-                        <div class="bars">
-                            <div class="info">
+                    <div class="column">
+                        <div class="left">
+                            <div class="bars">                            
                                 <span>Java</span>
-                                <span>80%</span>
                             </div>
-                            <div class="line java"></div>
-                        </div>
-
-                        <div class="bars">
-                            <div class="info">
-                                <span>HTML & CSS</span>
-                                <span>70%</span>
-                            </div>
-                            <div class="line htmlcss"></div>
-                        </div>
-
-                        <div class="bars">
-                            <div class="info">
+                            <div class="bars">                            
                                 <span>C</span>
-                                <span>65%</span>
                             </div>
-                            <div class="line c"></div>
-                        </div>
-
-                        <div class="bars">
-                            <div class="info">
-                                <span>ARMv7</span>
-                                <span>65%</span>
+                            <div class="bars">                            
+                                <span>Python</span>
                             </div>
-                            <div class="line arm"></div>
-                        </div>
-
-                        <div class="bars">
-                            <div class="info">
-                                <span>Bash</span>
-                                <span>60%</span>
+                            <div class="bars">                            
+                                <span>HTML</span>
                             </div>
-                            <div class="line bash"></div>
-                        </div>
-
-                        <div class="bars">
-                            <div class="info">
-                                <span>OCmal</span>
-                                <span>55%</span>
+                            <div class="bars">                            
+                                <span>CSS</span>
                             </div>
-                            <div class="line ocaml"></div>
-                        </div>
-
-                        <div class="bars">
-                            <div class="info">
+                            <div class="bars">                            
                                 <span>JavaScript</span>
-                                <span>50%</span>
                             </div>
-                            <div class="line js"></div>
+                            <div class="bars">                            
+                                <span>Bash</span>
+                            </div>
                         </div>
+                        <div class="right">
+                            <div class="box">
+                                <span>Git</span>
+                            </div>
+                            <div class="box">
+                                <span>Agile</span>
+                            </div>
+                            <div class="box">
+                                <span>SQL</span>
+                            </div>
+                            <div class="box">
+                                <span>Linux</span>
+                            </div>
+                            <div class="box">
+                                <span>RESTful API</span>
+                            </div>
+                            <div class="box">
+                                <span>Kubernetes</span>
+                            </div>
+                            <div class="box">
+                                <span>Docker</span>
+                            </div>
+                            <div class="box">
+                                <span>Prometheus</span>
+                            </div>
+                            <div class="box">
+                                <span>Grafana</span>
+                            </div>
+                            <div class="box">
+                                <span>UML</span>
+                            </div>
+                            <div class="box">
+                                <span>Umple</span>
+                            </div>
+                            <div class="box">
+                                <span>Gradle</span>
+                            </div>
+                            <div class="box">
+                                <span>Vue.js</span>
+                            </div>
+                            <div class="box">
+                                <span>Spring Boot</span>
+                            </div>
+                            <div class="box">
+                                <span>Cucumber</span>
+                            </div>
+                    </div>
+                    
+                    
                     </div>
                 </div>
             </div>
@@ -350,21 +328,21 @@
                                 <i class="fas fa-user"></i>
                                 <div class="info">
                                     <div class="head">Name</div>
-                                    <div class="sub-title">Chun</div>
+                                    <div class="sub-title">Chun Li</div>
                                 </div>
                             </div>
                             <div class="row">
                                 <i class="fas fa-map-marker-alt"></i>
                                 <div class="info">
                                     <div class="head">Address</div>
-                                    <div class="sub-title">Laval</div>
+                                    <div class="sub-title">Montreal, Quebec, Canada</div>
                                 </div>
                             </div>
                             <div class="row">
                                 <i class="fas fa-envelope"></i>
                                 <div class="info">
                                     <div class="head">Email</div>
-                                    <div class="sub-title">chun160712@gmail.com</div>
+                                    <div class="sub-title">chun.li.160712@gmail.com</div>
                                 </div>
                             </div>
                         </div>

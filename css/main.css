@@ -152,11 +152,11 @@ section .title::before{
     background: var(--grey);
 }
 
-.tools .title,
+.experience .title,
 .projects .title {
     color: var(--yellow);
 }
-.tools .title::before,
+.experience .title::before,
 .projects .title::before {
     background: var(--yellow);
 }
@@ -178,19 +178,17 @@ section .title::after{
     background: var(--white);
 }
 
-.tools .title::after,
+.experience .title::after,
 .projects .title::after {
     background: var(--grey);
     color: var(--lightBrown);
 }
 
-.about, .tools, .skills, .projects, .contact {
+.about, .experience, .skills, .projects, .contact {
     font-family: 'Kalam', cursive;
 }
 
 .about .about-content,
-.tools .tools-content,
-.skills .skills-content,
 .projects carousel,
 .contact .contact-content {
     display: flex;
@@ -203,7 +201,7 @@ section .title::after{
 .about, .skills, .contact{
     background: var(--white);
 }
-.home, .tools, .projects, .footer {
+.home, .experience, .projects, .footer {
     background: var(--grey);
 }
 
@@ -393,22 +391,20 @@ section .title::after{
 
 
 
-/* tools & projects section */
-.tools, .projects {
+/* projects section */
+.projects {
     color: var(--yellow);
 }
-.tools .tools-content .card:hover,
+
 .projects .carousel .card:hover {
     color: var(--grey);
     background: var(--yellow);
 }
 
-.tools .tools-content .card .box,
 .projects .carousel .card .box {
     transition: all 0.3s ease;
 }
 
-.tools .tools-content .card:hover .box,
 .projects .carousel .card:hover .box {
     transform: scale(1.05);
 }
@@ -416,53 +412,75 @@ section .title::after{
 
 
 
-/* tools unique section */
-.tools .title::after{
-    content: "tools i use";
+/* experience unique section */
+.experience .title::after{
+    content: "my work / internship experiences";
 }
 
-.tools .tools-content .card{
-    height:17rem;
+.experience .experience-content {
+    justify-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.experience .experience-content .card{
+    height:auto;
     width: calc(33% - 20px);
     background: var(--brown);
     text-align: center;
     border-radius: 10px;
-    padding: 20px 20px;
+    padding: 25px 30px;
     transition: all 0.3s ease;
-    margin-top: 60px;
+    margin: 50px auto;
+    color: var(--yellow);
 }
 
-.tools .tools-content .card .box img {
-    --iw: 33px;
-    --ih:33px;
-    width: var(--iw);
-    height: var(--ih);
+.experience .experience-content .card:hover{
+    background: var(--yellow);
+    color: var(--grey);
 }
 
-.tools .tools-content .card .box .text {
+.experience .experience-content .card span{
+    text-align: center;
     font-size: 25px;
-    font-weight: 600;
-    margin: 10px 0 7px 0;
 }
 
-.tools .tools-content .card .box .p_title {
-    font-size: 19px;
-    font-weight: 600;
+.experience .experience-content .card:hover span{
+    text-align: center;
+    font-size: 26px;
 }
 
-.tools .tools-content .card .box .p_content {
-    font-size: 19px;
-    font-weight: 500;
+.experience .experience-content .card .detail{
+    font-size: 17px;
 }
 
-.tools .tools-content .card .box .p_content a {
-    font-size: 19px;
-    font-weight: 600;
-    color: var(--lightBrown);
+.experience .experience-content .card .detail .company{
+    color: var(--yellow);
+    text-align: center;
+}
+.experience .experience-content .card:hover .detail .company{
+    color: var(--grey);
+    font-size: 18px;
 }
 
-.tools .tools-content .card .box .p_content a:hover {
+.experience .experience-content .card .detail .time{
+    color: var(--grey);
+    text-align: center;
+}
+
+.experience .experience-content .card:hover .detail .time{
     color: var(--brown);
+    font-size: 18px;
+}
+
+.experience .experience-content .card p{
+    font-size: 17px;
+    text-align: justify;
+}
+
+.experience .experience-content .card:hover p{
+    font-size: 18px;
 }
 
 
@@ -470,7 +488,7 @@ section .title::after{
 
 /* projects unique section */
 .projects .title::after {
-    content: "projects i did";
+    content: "projects I worked on";
 }
 
 .projects p {
@@ -498,7 +516,7 @@ section .title::after{
     justify-content: center;
 }
 
-.projects .carousel .card .text { /* could be merged with tools section */
+.projects .carousel .card .text { /* could be merged with experience section */
     font-size: 25px;
     font-weight: 500;
     margin: 10px 0 7px 0;
@@ -550,106 +568,68 @@ section .title::after{
 
 /* skills section */
 .skills .title::after {
-    content: "what i know";
+    content: "what I know";
 }
 
-.skills .skills-content .column {
+.skills .skills-content .titles {
+    display: flex;
+    justify-content: center;
     margin-top: 30px;
-    width: calc(50% - 30px);
+    padding-top: 10px;
 }
 
-.skills .skills-content .left .text {
+.skills .skills-content .titles .text{
     color: var(--grey);
+    width: 50%;
     font-size: 25px;
     font-weight: 600;
     margin-bottom: 15px;
+    text-align: center;
 }
 
-.skills .skills-content .left p {
-    color: var(--grey);
-    font-size: 17px;
-    text-align: justify;
-}
-
-.skills .skills-content .left a { 
-    display: inline-block;
-    background: var(--brown);
-    color: var(--yellow);
-    font-size: 20px;
-    font-weight: 500;
-    padding: 5px 30px;
-    margin-top: 20px;
-    border-radius: 10px;
-    border: 2px solid var(--brown);
-    transition: all 0.5s ease;
-}
-
-.skills .skills-content .left a:hover {
-    color: var(--brown);
-    background: none;
-}
-
-.skills .skills-content .right .bars {
-    margin-bottom: 15px;
-
-}
-
-.skills .skills-content .right .info {
+.skills .skills-content .column {
     display: flex;
-    margin-bottom: 5px;
     align-items: center;
     justify-content: space-between;
 }
 
-.skills .skills-content .right span {
-    font-weight: 600;
-    font-size: 18px;
-}
-
-.skills .skills-content .right .line {
-    height: 5px;
-    width: 100%;
-    background: var(--yellow);
-    position: relative;
-}
-
-.skills .skills-content .right .line::before {
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 80%;
-    left: 0;
-    top: 0;
-    background: var(--brown);
-}
-
-.skills .skills-content .right .java::before {
-    width: 80%;
-}
-
-.skills .skills-content .right .c::before {
-    width: 65%;
-}
-
-.skills .skills-content .right .bash::before {
-    width: 60%;
-}
-
-.skills .skills-content .right .arm::before {
-    width: 65%;
-}
-
-.skills .skills-content .right .ocaml::before {
-    width: 55%;
-}
-
-.skills .skills-content .right .htmlcss::before {
-    width: 70%;
-}
-
-
-.skills .skills-content .right .js::before {
+.skills .skills-content .left,
+.skills .skills-content .right {
     width: 50%;
+}
+
+.skills .skills-content .left .bars {
+    background: var(--brown);
+    width: 75%;
+    height: 50px;
+    padding: 10px 30px;
+    margin: 20px auto;
+    border-radius: 10px;
+    text-align: center;
+ 
+}
+
+.skills .skills-content .left .bars span,
+.skills .skills-content .right .box span {
+    color: var(--yellow);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.skills .skills-content .right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.skills .skills-content .right .box {
+    background: var(--brown);
+    width: 48%;
+    padding: 5px 30px;
+    margin: 10px auto;
+    border-radius: 10px;
+    text-align: center;
 }
 
 
@@ -869,8 +849,8 @@ section .title::after{
     .about .about-content .right {
         flex: 100%;
     }
-    /* tools section */
-    .tools .tools-content .card {
+    /* experience section */
+    .experience .experience-content .card {
         width: calc(50% - 10px);
         margin-bottom: 20px;
     }
@@ -896,8 +876,8 @@ section .title::after{
         font-size: 20px;
         padding: 9px 25px; /* remove? */
     }
-    /* tools section */
-    .tools .tools-content .card,
+    /* experience section */
+    .experience .experience-content .card,
     .skills .skills-content .column{
         width: 100%;
     }
